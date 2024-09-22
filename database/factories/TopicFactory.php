@@ -19,11 +19,11 @@ class TopicFactory extends Factory
         return [
             'title' => fake()->name(),
             'content' => fake()->text(),
-            'content' => fake()->numberBetween(0, 40),
+            'views' => fake()->numberBetween(0, 40),
             'trending' => fake()->numberBetween(0, 1),
             'published' => fake()->numberBetween(0, 1),
             'image' => basename(fake()->image(public_path('assets/admin/images/topics'))),
-            'category_id' => fake()->numberBetween(1, 10),
+            'category_id' => fake()->numberBetween(1, 6),
         ];
     }
 }
